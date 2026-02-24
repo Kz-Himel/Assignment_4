@@ -3,29 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Style Sheet Link -->
+   <link rel="stylesheet" href="style.css">
   <title>Job Application Tracker</title>
-
-  <!-- Tailwind + DaisyUI -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.4.24/dist/full.min.css" rel="stylesheet" type="text/css" />
 </head>
+<body>
 
-<body class="bg-gray-100 min-h-screen px-[245px] py-[60px]">
+    <header>
+        <h1>Job Application Tracker</h1>
 
-    <!-- Header -->
-    <header class="bg-white shadow p-6">
-        <h1 class="text-3xl font-bold">Job Application Tracker</h1>
+        <div class="dashboard">
+            <div class="box1">
+                <h3>Total</h3>
+                <h1>8</h1>
+            </div>
+        </div>
     </header>
 
-    <!-- Main section -->
-     <main class="max-w-7xl mx-auto p-6">
-
-        <!-- Dashboard -->
-         
-
-     </main>
-
-
+    <!-- Main Section -->
+     <div class="container">
+        <h2>Available Jobs</h2>
+        <div class="job-btns">
+            <button id="all-btn" class="primary-btn">All</button>
+            <button id="interview-btn" class="primary-btn">Interview</button>
+            <button id="reject-btn" class="primary-btn">Rejected</button>
+        </div>
+        
+     </div>
+    
 <script src="main.js"></script>
 
 </body>
