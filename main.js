@@ -3,18 +3,18 @@ let interviewList = [];
 let rejectedList = [];
 let currentStatus = "all";
 
-// Count elements
+// Get Count elements
 let totalCount = document.getElementById("total");
 let interviewCount = document.getElementById("interview");
 let rejectedCount = document.getElementById("rejected");
 const jobsCount = document.getElementById('jobs-count');
 
-// Containers
+// Get Containers
 const cardContainer = document.getElementById("card-container");
 const filterContainer = document.getElementById("filter-section");
 const mainContainer = document.getElementById("main-container");
 
-// Filter buttons
+// Get Filter buttons
 const allFilterBtn = document.getElementById('all-filter-btn');
 const allInterviewBtn = document.getElementById('interview-filter-btn');
 const allRejectBtn = document.getElementById('rejected-filter-btn');
@@ -122,7 +122,7 @@ function renderRejected() {
     }
 }
 
-// Event listener for card actions
+// Add Event listeners for card actions
 mainContainer.addEventListener('click', function(event) {
 
     const target = event.target;
@@ -136,7 +136,7 @@ mainContainer.addEventListener('click', function(event) {
 
         card.querySelector('.status').innerText = 'Interview';
 
-        // Add to interviewList if not exists
+        // Add to interviewList if its not exists
         let found = false;
         for(let i=0; i<interviewList.length; i++){
             if(interviewList[i].jobName === jobName) found = true;
