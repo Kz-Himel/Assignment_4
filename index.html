@@ -33,12 +33,12 @@
 
             <div class="bg-white shadow-2xs p-4 rounded-[8px]">
                 <p class="font-bold">Interview</p>
-                <h2 class="text-[30px] font-bold text-green-500" id="thrive">0</h2>
+                <h2 class="text-[30px] font-bold text-green-500" id="interview">0</h2>
             </div>
 
             <div class="bg-white shadow-2xs p-4 rounded-[8px]">
                 <p class="font-bold">Rejected</p>
-                <h2 class="text-[30px] font-bolfont-bold text-red font-bold" id="struggle">0</h2>
+                <h2 class="text-[30px] font-bolfont-bold text-red font-bold" id="rejected">0</h2>
             </div>
         </div>
         <hr class="text-gray-300 my-8">
@@ -53,6 +53,7 @@
             <p id="jobs-count" class="text-gray-600">8 Jobs</p>
          </div>
         
+         <!-- Toggle buttons -->
         <div class="mb-6 flex gap-4">
             <button onclick="toggleStyle('all-filter-btn')" class="bg-blue-500 text-white px-[20px] py-[8px] rounded-[4px]" id="all-filter-btn">All</button>
             <button onclick="toggleStyle('interview-filter-btn')" class="bg-gray-50 px-[12px] py-[8px] shadow-2xl" id="interview-filter-btn">Interview</button>
@@ -61,7 +62,7 @@
 
         <!-- Filter Container -->
          <section id="filter-section" class="hidden">
-            <div class="card flex justify-between p-8 gap-[20px] bg-white shadow-xl">
+            <div class="card flex flex-col justify-between p-8 gap-[20px] bg-white shadow-xl">
                 
                <img src="jobs.png" alt="">
                <h2 class="text-blue-900 text-2xl font-bold">No jobs available</h2>
