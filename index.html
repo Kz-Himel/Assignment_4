@@ -4,33 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Style Sheet Link -->
-   <link rel="stylesheet" href="style.css">
+  <!-- Tailwind CSS Link -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
   <title>Job Application Tracker</title>
 </head>
-<body>
+<body class="bg-[#f8fafc]">
 
-    <header>
-        <h1>Job Application Tracker</h1>
+    <!-- Header Section -->
+     <header class="w-[80%] mx-auto mt-[60px]">
+        <h1 class="text-4xl font-bold text-blue-900 mb-[20px]">Job Application Tracker</h1>
+        <div class="grid grid-cols-3 gap-4">
+            <div class="bg-white shadow-2xs p-4 rounded-[8px]">
+                <p class="font-bold">Total</p>
+                <h2 class="text-[30px] font-bolfont-bold text-blue-900" id="total">0</h2>
+            </div>
 
-        <div class="dashboard">
-            <div class="box1">
-                <h3>Total</h3>
-                <h1>8</h1>
+            <div class="bg-white shadow-2xs p-4 rounded-[8px]">
+                <p class="font-bold">Thrive</p>
+                <h2 class="text-[30px] font-bolfont-bold text-green-500" id="thrive">0</h2>
+            </div>
+
+            <div class="bg-white shadow-2xs p-4 rounded-[8px]">
+                <p class="font-bold">Struggling</p>
+                <h2 class="text-[30px] font-bolfont-bold text-redfont-bold00" id="struggle">0</h2>
             </div>
         </div>
-    </header>
+        <hr class="text-gray-300 my-8">
+     </header>
 
-    <!-- Main Section -->
-     <div class="container">
-        <h2>Available Jobs</h2>
-        <div class="job-btns">
-            <button id="all-btn" class="primary-btn">All</button>
-            <button id="interview-btn" class="primary-btn">Interview</button>
-            <button id="reject-btn" class="primary-btn">Rejected</button>
+
+     <!-- Main Section -->
+     <main class="w-[80%] mx-auto" id="main-container">
+        <!-- Title -->
+        <h2 class="text-2xl text-blue-900 pb-4">Available Jobs</h2>
+
+        <div class="mb-6">
+            <button onclick="toggleStyle('all-filter-btn')" class="bg-blue-500 text-white px-5 py-2 rounded-[4px]" id="all-filter-btn">All</button>
+            <button onclick="toggleStyle('thrive-filter-btn')" class="bg-gray-50 px-5 py-2 shadow-2xl" id="thrive-filter-btn">Thriving</button>
+            <button onclick="toggleStyle('struggle-filter-btn')" class="bg-gray-50 px-5 py-2 shadow-2xl" id="struggle-filter-btn">Struggling</button>
         </div>
-        
-     </div>
+
+        </main>
     
 <script src="main.js"></script>
 
